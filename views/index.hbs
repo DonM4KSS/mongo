@@ -1,0 +1,17 @@
+<h2>Товары</h2>
+
+{{#if products.length}}
+<ul>
+  {{#each products}}
+  <a href="/product?id={{_id}}">
+    <li class="productPlace">
+         <span>{{name}}</span>
+         <span>{{price}}$</span>
+    </li>
+  </a>
+
+  {{/each}}
+</ul>
+{{else}}
+<p>No products!</p>
+{{/if}}

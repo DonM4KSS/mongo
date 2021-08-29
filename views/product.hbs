@@ -1,0 +1,14 @@
+<h2>Товар</h2>
+
+{{#if product.length}}
+  <form action="/edit" method="POST">
+    {{#each product}}
+            <input type='text' value="{{name}}" name="name">
+            <input type='text' value="{{price}}" name="price">
+            <input type="hidden" name="id" value="{{_id}}">
+    {{/each}}
+    <input type="submit" value="Редактировать">
+  </form>
+{{else}}
+<p>undefined product</p>
+{{/if}}
